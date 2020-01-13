@@ -1,0 +1,46 @@
+<template lang="pug">
+.page-3
+  img.text(src="@|page3-text.png|")
+  .info
+    p 总策划：赵强  总监制：刘慧、李鉴、常红
+    p 编辑： 杨牧、刘叶婷、刘洁妍  设计：马婷、闫倩   技术：蒲鸽
+    br
+    br
+    p.min-font 人 民 网 版 权 所 有 ，未 经 书 面 授 权 禁 止 使 用
+    p.min-font Copyright © 1997-2020 by www.people.com.cn. all rights reserved
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.page-3 {
+  background-image: url('@|page3.jpg|');
+}
+.text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+.info {
+  position: absolute;
+  bottom: 12%;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.7;
+  color: #193776;
+}
+.min-font {
+  font-size: 20px;
+}
+</style>

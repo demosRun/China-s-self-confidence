@@ -1,0 +1,45 @@
+<template lang="pug">
+.page-1
+  img.so-3#mainText(src="@|page1-3.png|")
+  p.so-4 &emsp;&emsp;70年砥砺奋进，70年破浪前行。2019年是新中国成立70周年，中国成就备受世界瞩目。这一年，习近平主席在多个国内外高光时刻讲述中国发展故事，以坚定自信的政治气魄、大国领袖的责任担当，深入思考人类前途命运，引领自信的中国阔步走向世界。<br>
+  img.so-2(src="@|page1-2.png|" o-animation="shrink" o-tap="owo.go('page2', 'rotatePushLeft', 'moveFromRight&&ontop', 'rotatePushRight', 'moveFromLeft&&ontop', true)")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.animate('zoomIn2', this.$dom.mainText)
+    }
+  }
+</script>
+
+
+<style lang="less">
+.page-1 {
+  background-image: url('@|page1.jpg|');
+}
+.so-3 {
+  position: absolute;
+  left: 65px;
+  z-index: 3;
+  top: 748px
+}
+.so-4 {
+  position: absolute;
+  left: 133px;
+  z-index: 4;
+  font-family: 'SimSun', 'AdobeInvisFont', 'AdobeHeitiStd-Regular';
+  font-size: 22px;
+  line-height: 36px;
+  color: #0e0e0e;
+  top: 1116px;
+  width: 385px;
+  text-align: justify;
+}
+.so-2 {
+  position: absolute;
+  left: 551px;
+  z-index: 2;
+  top: 1112px
+}
+</style>
