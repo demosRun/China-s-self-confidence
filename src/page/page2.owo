@@ -61,7 +61,7 @@
       img.so-9-6(src="@|page2-9-6.png|")
       img.so-9-4(src="@|page2-9-4.png|")
       img.so-9-5(src="@|page2-9-5.png|")
-    .swiper-slide(style="background-color: #fdd991;")
+    .swiper-slide(style="background-color: #deeafa;")
       img.so-10-2(src="@|page2-10-2.png|")
       img.so-10-4(src="@|page2-10-4.png|")
       img.so-10-6(src="@|page2-10-6.png|")
