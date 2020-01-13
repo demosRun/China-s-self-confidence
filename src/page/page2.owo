@@ -1,6 +1,6 @@
 <template lang="pug">
 .page-2
-  .swiper-wrapper
+  .swiper-wrapper#swiperBox
     .swiper-slide(style="background-color: #fff5ea;")
       img.so-2(src="@|page2-2.png|")
       img.so-5(src="@|page2-5.png|")
@@ -78,8 +78,15 @@
 <script>
   module.exports = {
     created: function () {
+      const _this = this
       var mySwiper = new Swiper('.page-2', {
-        autoplay: true,//可选选项，自动滑动
+        autoplay: true,
+        on: {
+          slideChangeTransitionStart: function () {
+            const nextDom = _this.$dom.swiperBox.children[this.activeIndex]
+            owo.tool.animate('zoomIn2', nextDom.children[1], 0)
+          }
+        }
       })
     }
   }
