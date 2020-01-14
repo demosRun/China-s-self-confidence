@@ -1,4 +1,4 @@
-// Mon Jan 13 2020 17:03:51 GMT+0800 (GMT+08:00)
+// Tue Jan 14 2020 15:58:40 GMT+0800 (GMT+08:00)
 var owo = {tool: {},state: {},};
 /* 方法合集 */
 var _owo = {}
@@ -134,6 +134,13 @@ _owo.handleEvent = function (moudleScript) {
               switch (tempDom.tagName) {
                 case 'INPUT':
                   switch (tempDom.getAttribute('type')) {
+                    case 'number':
+                      if (value == undefined) value = ''
+                      tempDom.value = value
+                      tempDom.oninput = function (e) {
+                        shaheRun.apply(moudleScript, [eventFor + '=' + e.target.value])
+                      }
+                      break;
                     case 'text':
                       if (value == undefined) value = ''
                       tempDom.value = value
